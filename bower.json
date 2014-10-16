@@ -1,0 +1,24 @@
+{
+  "name": "wise",
+  "version": "0.0.0",
+  "authors": [
+    "Justin <oglen.net@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.15",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "bootstrap": "~3.2.0",
+    "ztree": "~3.5.0"
+  }
+}

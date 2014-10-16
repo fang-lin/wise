@@ -1,0 +1,241 @@
+body {
+    padding-top: 53px;
+    background: url("images/bg.png");
+    color: #ffffff;
+}
+
+a {
+    color: #aa0033;
+}
+
+a:hover {
+    color: #aa0033;
+}
+
+header {
+    background: url("images/top_bar_bg.png");
+}
+
+header.navbar-fixed-top {
+    border: medium none;
+}
+
+header .navbar-brand {
+    height: 53px;
+    padding: 0;
+    margin-left: 0 !important;
+}
+
+header .navbar-right a {
+    color: #ffffff !important;
+}
+
+header .navbar-right a:hover {
+    color: #aa0033 !important;
+}
+
+.caps {
+    padding: 10px;
+    height: 32px;
+}
+
+.caps:before,
+.caps:after {
+    content: ' ';
+    background: url("images/cap.png");
+    display: block;
+    height: 17px;
+    width: 16px;
+}
+
+.caps:before {
+    float: left;
+}
+
+.caps:after {
+    float: right;
+}
+
+.sidebar {
+}
+
+.nav-sidebar {
+    padding: 5px 0;
+}
+
+.nav-sidebar a {
+    color: #ffffff !important;
+    padding: 15px 20px !important;
+}
+
+.nav-sidebar > li > a:hover {
+    color: #fd0302 !important;
+    background: none;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #ffffff !important;
+    background: linear-gradient(#fd0302, #1c0404);
+}
+
+.main {
+    color: #ffffff;
+}
+
+.pane {
+    margin: 10px -5px;
+    background: url("images/panel_bg.png");
+    -webkit-box-shadow: 0 3px 5px #000;
+    -moz-box-shadow: 0 3px 5px #000;
+    box-shadow: 0 3px 5px #000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.table {
+    margin-bottom: 10px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    border-color: #aaaaaa;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+    background: rgba(0, 0, 0, .3);
+}
+
+.pagination {
+    margin: 0;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    background: rgba(0, 0, 0, .3);
+    color: #ffffff;
+    border-color: #aaaaaa;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+    color: #aa0033;
+    background: rgba(255, 255, 255, .3);
+}
+
+.main-content {
+    padding: 0 15px;
+}
+
+.form-inline-wrap {
+    margin: 10px -15px;
+}
+
+.form-wrap {
+    margin: 10px 0;
+}
+
+.form-control {
+    color: #ffffff;
+    background: #333333 !important;
+    border-color: #aaaaaa;
+}
+
+.form-control:focus {
+    border-color: #aa0033;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(170, 0, 51, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(170, 0, 51, .6);
+}
+
+.btn-default {
+    color: #ffffff;
+    background: linear-gradient(#666, #333);
+    border-color: #aaaaaa;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    border-color: #aa0033;
+    color: #ffffff;
+    background: linear-gradient(#fd0302, #1c0404);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(170, 0, 51, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(170, 0, 51, .6);
+}
+
+.input-group-addon {
+    color: #ffffff;
+    background: #333333;
+}
+
+.form-inline-wrap form {
+    display: inline-block;
+}
+
+.form-right {
+    float: right;
+    margin: 0 -10px 0 0;
+
+}
+
+.dropdown-menu {
+    background: #666;
+}
+
+.datetimepicker table tr td span.active, .datetimepicker table tr td span.active:hover, .datetimepicker table tr td span.active.disabled, .datetimepicker table tr td span.active.disabled:hover,
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover {
+    background: linear-gradient(#fd0302, #1c0404);
+}
+
+.datetimepicker th:hover {
+    background: #333 !important;
+}
+
+.datetimepicker table tr td.day:hover,
+.datetimepicker table tr td span:hover {
+    background: #333;
+}
+
+[class*=" datetimepicker-dropdown"]:before,
+[class*=" datetimepicker-dropdown"]:after {
+    border-bottom-color: #666;
+}
+
+.modal-content {
+    background-image: url("images/panel_bg.png");
+    background-color: transparent;
+}
+
+.modal-header .close,
+.modal-header .close span {
+    color: #ffffff;
+    text-shadow: none;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#account-tree {
+    border: solid 1px #aaaaaa;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.ztree li a {
+    color: #ffffff;
+}
