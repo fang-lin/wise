@@ -19,6 +19,7 @@
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2",
     "bootstrap": "~3.2.0",
-    "ztree": "~3.5.0"
+    "ztree": "~3.5.0",
+    "highcharts": "~4.0.4"
   }
 }

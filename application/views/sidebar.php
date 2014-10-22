@@ -3,13 +3,13 @@
         <div class="caps"></div>
         <ul class="nav nav-sidebar">
             <li class="<?php
-            if ($__class__ == 'personal') {
+            if ($__class__ == 'monitoring') {
                 echo 'active';
             }
             ?>">
-                <a href="personal">
-                    <span class="glyphicon glyphicon-user"></span>
-                    个人信息
+                <a href="monitoring">
+                    <span class="glyphicon glyphicon-dashboard"></span>
+                    设备监控
                 </a>
             </li>
             <li class="<?php
@@ -30,6 +30,16 @@
                 <a href="account">
                     <span class="glyphicon glyphicon-briefcase"></span>
                     账户管理
+                </a>
+            </li>
+            <li class="<?php
+            if ($__class__ == 'message') {
+                echo 'active';
+            }
+            ?>">
+                <a href="message">
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    消息中心
                 </a>
             </li>
         </ul>

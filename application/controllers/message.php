@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Account extends CI_Controller
+class Message extends CI_Controller
 {
     public function __construct()
     {
@@ -10,18 +10,6 @@ class Account extends CI_Controller
     }
 
     public function index()
-    {
-        $this->data['__function__'] = strtolower(__FUNCTION__);
-        $this->load->view('master.php', $this->data);
-    }
-
-    public function personal()
-    {
-        $this->data['__function__'] = strtolower(__FUNCTION__);
-        $this->load->view('master.php', $this->data);
-    }
-
-    public function subordinate()
     {
         $this->data['__function__'] = strtolower(__FUNCTION__);
         $this->load->view('master.php', $this->data);

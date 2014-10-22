@@ -8,6 +8,21 @@ a {
     color: #aa0033;
 }
 
+.container-fluid,
+.container {
+
+}
+
+.row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 a:hover {
     color: #aa0033;
 }
@@ -85,7 +100,7 @@ header .navbar-right a:hover {
 }
 
 .pane {
-    margin: 10px -5px;
+    margin: 10px 0;
     background: url("images/panel_bg.png");
     -webkit-box-shadow: 0 3px 5px #000;
     -moz-box-shadow: 0 3px 5px #000;
@@ -137,7 +152,8 @@ header .navbar-right a:hover {
 }
 
 .form-inline-wrap {
-    margin: 10px -15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .form-wrap {
@@ -187,12 +203,14 @@ header .navbar-right a:hover {
 
 .form-right {
     float: right;
-    margin: 0 -10px 0 0;
-
 }
 
 .dropdown-menu {
     background: #666;
+}
+
+.datetimepicker i {
+    color: #ffffff;
 }
 
 .datetimepicker table tr td span.active, .datetimepicker table tr td span.active:hover, .datetimepicker table tr td span.active.disabled, .datetimepicker table tr td span.active.disabled:hover,
@@ -219,6 +237,10 @@ header .navbar-right a:hover {
     background-color: transparent;
 }
 
+.modal-header {
+    border-bottom: medium none;
+}
+
 .modal-header .close,
 .modal-header .close span {
     color: #ffffff;
@@ -238,4 +260,44 @@ header .navbar-right a:hover {
 
 .ztree li a {
     color: #ffffff;
+}
+
+#account-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+#account-icons li,
+#account-icons a {
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    color: #333;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+#account-icons li {
+    margin: 10px;
+}
+
+#account-icons a:hover {
+    text-decoration: none;
+    color: #aa0033;
+}
+
+#account-icons span {
+    display: block;
+    font-size: 48px;
+    line-height: 64px;
+    width: 64px;
+    height: 64px;
+}
+
+#account-icons label {
+    display: block;
+    font-size: 14px;
 }

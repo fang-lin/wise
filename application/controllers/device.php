@@ -15,6 +15,18 @@ class Device extends CI_Controller
         $this->load->view('master.php', $this->data);
     }
 
+    public function edit()
+    {
+        $this->data['__function__'] = strtolower(__FUNCTION__);
+        $this->load->view('master.php', $this->data);
+    }
+
+    public function detail()
+    {
+        $this->data['__function__'] = strtolower(__FUNCTION__);
+        $this->load->view('master.php', $this->data);
+    }
+
     public function add()
     {
         $this->data['__function__'] = strtolower(__FUNCTION__);

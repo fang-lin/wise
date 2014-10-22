@@ -29,11 +29,8 @@
     <script src="lib/ztree/js/jquery.ztree.all-3.5.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-    <script>
-        $(function () {
-            $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
-        });
-    </script>
+    <script src="lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="lib/highcharts/highcharts.js"></script>
 </head>
 
 <body>
