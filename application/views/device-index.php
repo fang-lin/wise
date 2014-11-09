@@ -1,3 +1,71 @@
+<ul id="devices-m-icons" class="clear">
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>我的设备</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>设备添加</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>设备密码</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>设备锁定</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>设备续费</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>设备维护</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>报警记录</label>
+        </a>
+    </li>
+    <li>
+        <a href="monitoring/detail">
+            <span class="glyphicon glyphicon-hdd"></span>
+            <label>2222</label>
+        </a>
+    </li>
+</ul>
+<script>
+    $(function () {
+        $('#devices-m-icons li').hover(function (event) {
+            $(event.currentTarget)
+                .animate({
+                    margin: 0,
+                    padding: '20px'
+                }, 100);
+        }, function (event) {
+            $(event.currentTarget)
+                .animate({
+                    margin: '10px',
+                    padding: '10px'
+                }, 100);
+        });
+    });
+</script>
+<!--
 <h4>设备列表</h4>
 <div class="form-inline-wrap">
     <form class="form-inline" role="form">
@@ -19,8 +87,8 @@
             <th style="width: 128px;">操作</th>
         </tr>
         <?php
-        for ($i = 0; $i < 10; ++$i) {
-            ?>
+for ($i = 0; $i < 10; ++$i) {
+    ?>
             <tr>
                 <td><input type="checkbox"/></td>
                 <td>15:29:09</td>
@@ -35,8 +103,8 @@
                 </td>
             </tr>
         <?php
-        }
-        ?>
+}
+?>
     </table>
 </div>
 <ul class="pagination pagination-sm">
@@ -53,3 +121,4 @@
         $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
     });
 </script>
+-->

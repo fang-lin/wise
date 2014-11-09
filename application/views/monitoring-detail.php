@@ -1,34 +1,29 @@
-<h4>设备监控</h4>
+<!--<h4>设备监控</h4>-->
 <div class="form-inline-wrap">
-    <form class="form-inline" role="form">
-        <div class="form-group">
-
-            <div class="input-group">
-                <div class="input-group-addon">开始时间</div>
-                <input size="16" type="text" value="2012-06-15 14:45" readonly
-                       class="form-control input-sm form_datetime">
-            </div>
-
-            <div class="input-group">
-                <div class="input-group-addon">结束时间</div>
-                <input size="16" type="text" value="2012-06-15 14:45" readonly
-                       class="form-control input-sm form_datetime">
-            </div>
-            <button type="submit" class="btn btn-default btn-sm">查找</button>
+    <form class="form-inline form-left" role="form">
+        <div class="device-info">
+            <span>设备类型： <span>XXXX</span></span>
+            <span>传感器类型： <span>XXX</span></span>
+        </div>
+        <div class="device-info">
+            <span>总数： <span>1274</span></span>
+            <span>在线： <span>1000</span></span>
+            <span>离线： <span>272</span></span>
+            <span>报警： <span>2</span></span>
+            <span class="refresh">刷新：<span>10s</span></span>
         </div>
     </form>
     <form class="form-inline form-right" role="form">
-        <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-default">控制</button>
-            <a href="device/add" class="btn btn-sm btn-default">维修记录</a>
-            <a href="device/edit" class="btn btn-sm btn-default">编辑</a>
-        </div>
 
+        <input size="16" type="text" placeholder="输入ID/名称" class="form-control input-sm">
+        <button type="submit" class="btn btn-default btn-sm">查找</button>
     </form>
 </div>
 <div class="table-responsive">
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered" id="device-table">
+        <thead>
         <tr>
+            <th>设备名称</th>
             <th>时间</th>
             <th>温度1</th>
             <th>温度2</th>
@@ -41,11 +36,15 @@
             <th>输出2</th>
             <th>电压/电流</th>
             <th>信号</th>
+            <th></th>
         </tr>
+        </thead>
+        <tbody>
         <?php
         for ($i = 0; $i < 10; ++$i) {
             ?>
             <tr>
+                <td><a href="monitoring/detail3">上海冰柜</a></td>
                 <td>15:29:09</td>
                 <td>25</td>
                 <td>-63</td>
@@ -58,10 +57,16 @@
                 <td>是</td>
                 <td>5V/80mA</td>
                 <td>78%</td>
+                <td>
+                    <a href="monitoring/detail2">
+                        More
+                    </a>
+                </td>
             </tr>
         <?php
         }
         ?>
+        </tbody>
     </table>
 </div>
 <ul class="pagination pagination-sm">
@@ -76,5 +81,46 @@
 
 <script>
     $(function () {
+
+        var refreshInterval = 10;
+
+        setInterval(function () {
+
+            $.get('api/monitorSensorData', function (data) {
+                var $table = $('#device-table tbody');
+                var template = _.template($('#device-table-template').html());
+                var slice = $table.find('tr').size() - data.length;
+                $table.find('tr').slice(slice, 10).remove();
+                $table.prepend(template({list: data}));
+            });
+
+        }, refreshInterval * 1000);
+
+
     });
+</script>
+<script type="text/template" id="device-table-template">
+    <% _.each(list, function(item, i) {%>
+
+    <tr>
+        <td><a href="monitoring/detail3"><%= item.type %></a></td>
+        <td><%= item.datetime %></td>
+        <td><%= item.temperatureA %></td>
+        <td><%= item.temperatureB %></td>
+        <td><%= item.temperatureC %></td>
+        <td><%= item.temperatureD %></td>
+        <td><%= item.switchOne ? '是': '否' %></td>
+        <td><%= item.switchTwo ? '是': '否' %></td>
+        <td><%= item.switchThree ? '是': '否' %></td>
+        <td><%= item.output %></td>
+        <td><%= item.output2 %></td>
+        <td><%= item.voltage %>/<%= item.electricity %></td>
+        <td><%= item.signalStrength %></td>
+        <td>
+            <a href="monitoring/detail2">
+                More
+            </a>
+        </td>
+    </tr>
+    <% }); %>
 </script>

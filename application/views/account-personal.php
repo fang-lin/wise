@@ -85,3 +85,13 @@
         </div>
     </form>
 </div>
+
+<script>
+    $(function () {
+        $(".form_datetime").datetimepicker({
+            showMeridian: true,
+            autoclose: true,
+            todayBtn: true
+        });
+    });
+</script>

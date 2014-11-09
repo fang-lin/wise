@@ -1,7 +1,7 @@
 <h4>账户管理</h4>
 <div class="row">
     <div class="col-sm-12">
-        <ul id="account-icons">
+        <ul id="account-icons" class="clear">
             <li>
                 <a href="account/personal">
                     <span class="glyphicon glyphicon-user"></span>

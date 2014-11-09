@@ -1,6 +1,10 @@
 <div class="col-sm-3 col-md-2 sidebar">
     <div class="pane">
         <div class="caps"></div>
+        <div class="portrait-wrap">
+            <img src="" alt="头像"/>
+            <p>用户名</p>
+        </div>
         <ul class="nav nav-sidebar">
             <li class="<?php
             if ($__class__ == 'monitoring') {

@@ -4,6 +4,15 @@ body {
     color: #ffffff;
 }
 
+.clear:after {
+    display: block;
+    clear: both;
+    content: ' ';
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+}
+
 a {
     color: #aa0033;
 }
@@ -262,34 +271,41 @@ header .navbar-right a:hover {
     color: #ffffff;
 }
 
-#account-icons {
+#account-icons,
+#devices-m-icons {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 0;
+    max-width: 440px;
 }
 
 #account-icons li,
-#account-icons a {
-    display: inline-block;
+#devices-m-icons li {
+    float: left;
     padding: 10px;
-    margin: 0;
+    margin: 10px;
     text-align: center;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+#account-icons a,
+#devices-m-icons a {
+    margin: 0;
+    padding: 0;
     color: #333;
     background: #ffffff;
-    cursor: pointer;
 }
 
-#account-icons li {
-    margin: 10px;
-}
-
+#devices-m-icons a:hover,
 #account-icons a:hover {
     text-decoration: none;
     color: #aa0033;
 }
 
-#account-icons span {
+#account-icons span,
+#devices-m-icons span {
     display: block;
     font-size: 48px;
     line-height: 64px;
@@ -297,7 +313,54 @@ header .navbar-right a:hover {
     height: 64px;
 }
 
-#account-icons label {
+#account-icons label,
+#devices-m-icons label {
     display: block;
     font-size: 14px;
+}
+
+.portrait-wrap {
+    text-align: center;
+}
+
+.portrait-wrap img {
+    width: 128px;
+    height: 128px;
+}
+
+.portrait-wrap p {
+    margin: 10px 0;
+}
+
+#devices-icons {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#devices-icons li {
+    float: left;
+    width: 180px;
+    border: solid 1px #ffffff;
+    margin: 5px;
+}
+
+#devices-icons a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.devices-icon img {
+    float: left;
+    height: 64px;
+    width: 64px;
+    margin: 0 10px 0 0;
+}
+
+.device-info {
+
+}
+
+.device-info > span {
+    margin: 0 24px 0 0;
 }

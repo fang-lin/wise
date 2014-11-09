@@ -27,6 +27,18 @@ class Monitoring extends CI_Controller
         $this->load->view('master.php', $this->data);
     }
 
+    public function detail2()
+    {
+        $this->data['__function__'] = strtolower(__FUNCTION__);
+        $this->load->view('master.php', $this->data);
+    }
+
+    public function detail3()
+    {
+        $this->data['__function__'] = strtolower(__FUNCTION__);
+        $this->load->view('master.php', $this->data);
+    }
+
     public function add()
     {
         $this->data['__function__'] = strtolower(__FUNCTION__);
