@@ -272,29 +272,40 @@
 
 <script>
     $(function () {
-        var nodes = [
-            {id: 1, pId: 0, name: '管理员', open: true},
-            {id: 2, pId: 1, name: '管理员1', open: true},
-            {id: 3, pId: 1, name: '管理员2', open: true},
-            {id: 4, pId: 2, name: '管理员3', open: true},
-            {id: 5, pId: 2, name: '管理员4', open: true}
-        ];
 
         var setting = {
-            data: {
-                simpleData: {
-                    enable: true
-                }
-            },
-            callback: {
-                onClick: function () {
-                    console.log('tree node onClick!');
-                    //todo: 点击树节点的回调函数
-                }
+            async: {
+                enable: true,
+                url: 'api/subordinateTree',
+                autoParam: ['id'],
+                otherParam: {sid: Math.random()}
             }
         };
+        $.fn.zTree.init($("#account-tree"), setting);
 
-        $.fn.zTree.init($("#account-tree"), setting, nodes);
+//        var nodes = [
+//            {id: 1, pId: 0, name: '管理员', open: true},
+//            {id: 2, pId: 1, name: '管理员1', open: true},
+//            {id: 3, pId: 1, name: '管理员2', open: true},
+//            {id: 4, pId: 2, name: '管理员3', open: true},
+//            {id: 5, pId: 2, name: '管理员4', open: true}
+//        ];
+//
+//        var setting = {
+//            data: {
+//                simpleData: {
+//                    enable: true
+//                }
+//            },
+//            callback: {
+//                onClick: function () {
+//                    console.log('tree node onClick!');
+//                    //todo: 点击树节点的回调函数
+//                }
+//            }
+//        };
+//
+//        $.fn.zTree.init($("#account-tree"), setting, nodes);
 
         $(".form_datetime").datetimepicker({
             showMeridian: true,

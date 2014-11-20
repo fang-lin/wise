@@ -13,7 +13,7 @@ class Api extends CI_Controller
 
         function getRow()
         {
-            return [
+            return array(
                 'signalStrength' => rand(0, 100) . '%',
                 'datetime' => mdate('%H:%i:%s', time()),
                 'subTerminalId' => 0,
@@ -30,10 +30,10 @@ class Api extends CI_Controller
                 'electricity' => '80mA',
                 'output' => rand(0, 1),
                 'output2' => rand(0, 1),
-            ];
+            );
         }
 
-        $result = [];
+        $result = array();
 
         for ($i = 0; $i < rand(3, 10); $i++) {
             $result[$i] = getRow();
@@ -43,6 +43,66 @@ class Api extends CI_Controller
             ->output
             ->set_content_type('application/json')
             ->set_output(json_encode($result));
+    }
+
+    public function subordinateTree()
+    {
+        $this->load->helper('date');
+
+        if (isset($_POST['id'])) {
+            $parentId = $_POST['id'];
+        } else {
+            $parentId = 0;
+        }
+
+        function getChildren($parentId)
+        {
+            $result = array();
+
+            $nodes = array(
+                array(
+                    'id' => 1,
+                    'name' => '管理员',
+                    'parentId' => 0,
+                    'isParent' => true,
+                ),
+                array(
+                    'id' => 2,
+                    'parentId' => 1,
+                    'name' => '管理员1',
+                    'isParent' => true
+                ),
+                array(
+                    'id' => 3,
+                    'parentId' => 1,
+                    'name' => '管理员2',
+                ),
+                array(
+                    'id' => 4,
+                    'parentId' => 2,
+                    'name' => '管理员3'
+                ),
+                array(
+                    'id' => 5,
+                    'parentId' => 2,
+                    'name' => '管理员4'
+                )
+            );
+
+            foreach ($nodes as $node) {
+                if ($node['parentId'] == $parentId) {
+                    array_push($result, $node);
+                }
+            }
+
+            return $result;
+        }
+
+        $this
+            ->output
+            ->set_content_type('application/json')
+//            ->set_output(json_encode($result));
+            ->set_output(json_encode(getChildren($parentId)));
     }
 }
 

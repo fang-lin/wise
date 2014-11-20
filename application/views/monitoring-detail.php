@@ -2,21 +2,26 @@
 <div class="form-inline-wrap">
     <form class="form-inline form-left" role="form">
         <div class="device-info">
-            <span>设备类型： <span>XXXX</span></span>
-            <span>传感器类型： <span>XXX</span></span>
+            <span>我的设备</span>
+            <span>设备总数： <span>5000</span></span>
+            <span>激活： <span>3000</span></span>
+            <span>未激活： <span>2000</span></span>
+            <span>到期： <span>500</span></span>
+            <span>10天后到期： <span>200</span></span>
         </div>
         <div class="device-info">
-            <span>总数： <span>1274</span></span>
-            <span>在线： <span>1000</span></span>
-            <span>离线： <span>272</span></span>
-            <span>报警： <span>2</span></span>
-            <span class="refresh">刷新：<span>10s</span></span>
+            <span>显示全部 <input type="checkbox"/></span>
+            <span>类型1： <span>200</span></span>
+            <span>类型2： <span>3000</span></span>
+            <span>类型3： <span>100</span></span>
+            <span>类型4： <span>700</span></span>
+            <span>类型5： <span>100</span></span>
         </div>
     </form>
     <form class="form-inline form-right" role="form">
 
         <input size="16" type="text" placeholder="输入ID/名称" class="form-control input-sm">
-        <button type="submit" class="btn btn-default btn-sm">查找</button>
+        <button type="submit" class="btn btn-default btn-sm">搜索</button>
     </form>
 </div>
 <div class="table-responsive">
@@ -58,9 +63,7 @@
                 <td>5V/80mA</td>
                 <td>78%</td>
                 <td>
-                    <a href="monitoring/detail2">
-                        More
-                    </a>
+                    <select name="" id=""></select>
                 </td>
             </tr>
         <?php
