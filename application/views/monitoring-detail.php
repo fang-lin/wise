@@ -85,11 +85,19 @@
 <script>
     $(function () {
 
-        var refreshInterval = 10;
+        _.templateSettings = {
+            evaluate: /\{\{([\s\S]+?)\}\}/g,
+            interpolate: /\{\{=([\s\S]+?)\}\}/g,
+            escape: /\{\{-([\s\S]+?)\}\}/g
+        };
+
+        var refreshInterval = 1;
 
         setInterval(function () {
 
-            $.get('api/monitorSensorData', function (data) {
+            $.get('api/monitorSensorData', {
+                id: 1
+            }, function (data) {
                 var $table = $('#device-table tbody');
                 var template = _.template($('#device-table-template').html());
                 var slice = $table.find('tr').size() - data.length;
@@ -103,27 +111,28 @@
     });
 </script>
 <script type="text/template" id="device-table-template">
-    <% _.each(list, function(item, i) {%>
+    {{ _.each(list, function(item, i) {}}
+
 
     <tr>
-        <td><a href="monitoring/detail3"><%= item.type %></a></td>
-        <td><%= item.datetime %></td>
-        <td><%= item.temperatureA %></td>
-        <td><%= item.temperatureB %></td>
-        <td><%= item.temperatureC %></td>
-        <td><%= item.temperatureD %></td>
-        <td><%= item.switchOne ? '是': '否' %></td>
-        <td><%= item.switchTwo ? '是': '否' %></td>
-        <td><%= item.switchThree ? '是': '否' %></td>
-        <td><%= item.output %></td>
-        <td><%= item.output2 %></td>
-        <td><%= item.voltage %>/<%= item.electricity %></td>
-        <td><%= item.signalStrength %></td>
+        <td><a href="monitoring/detail3">{{= item.type }}</a></td>
+        <td>{{= item.datetime }}</td>
+        <td>{{= item.temperatureA }}</td>
+        <td>{{= item.temperatureB }}</td>
+        <td>{{= item.temperatureC }}</td>
+        <td>{{= item.temperatureD }}</td>
+        <td>{{= item.switchOne ? '是': '否' }}</td>
+        <td>{{= item.switchTwo ? '是': '否' }}</td>
+        <td>{{= item.switchThree ? '是': '否' }}</td>
+        <td>{{= item.output }}</td>
+        <td>{{= item.output2 }}</td>
+        <td>{{= item.voltage }}/{{= item.electricity }}</td>
+        <td>{{= item.signalStrength }}</td>
         <td>
             <a href="monitoring/detail2">
                 More
             </a>
         </td>
     </tr>
-    <% }); %>
+    {{ }); }}
 </script>

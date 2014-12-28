@@ -104,6 +104,27 @@ class Api extends CI_Controller
 //            ->set_output(json_encode($result));
             ->set_output(json_encode(getChildren($parentId)));
     }
+
+    public function chartData()
+    {
+        $this->load->helper('date');
+
+        function getData()
+        {
+            return array(now(), rand(1, 30));
+        }
+
+        $result = array();
+
+        for ($j = 0; $j < 4; $j++) {
+            $result[$j] = getData();
+        }
+
+        $this
+            ->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($result));
+    }
 }
 
 /* End of file Api.php */
