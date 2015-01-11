@@ -1,0 +1,58 @@
+/**
+ * BUG: IE9 不支持 last-child
+ **/
+.m-table-wrap{}
+.m-table{
+    border-collapse: collapse;
+}
+.m-table tr{
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #999999;
+}
+.m-table th,
+.m-table td{
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #999999;
+    line-height: 150%;
+    padding: 2px 8px;
+    margin: 0;
+    -ms-text-overflow: clip;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.bor-less tr:first-child,
+.bor-less-tb tr:first-child,
+.bor-less-t tr:first-child{
+    border-width: 0 0 1px 0;
+}
+.bor-less tr:last-child,
+.bor-less-tb tr:last-child,
+.bor-less-b tr:last-child{
+    border-width: 1px 0 0 0;
+}
+.bor-less td:first-child,
+.bor-less th:first-child,
+.bor-less-lr td:first-child,
+.bor-less-lr th:first-child,
+.bor-less-l td:first-child,
+.bor-less-l th:first-child{
+    border-width: 0 1px 0 0;
+}
+.bor-less td:last-child,
+.bor-less th:last-child,
+.bor-less-lr td:last-child,
+.bor-less-lr th:last-child,
+.bor-less-r td:last-child,
+.bor-less-r th:last-child{
+    border-width: 0 0 0 1px;
+}
+.m-tc-odd{
+    background-color: #FFFFFF;
+}
+.m-tc-even{
+    background-color: #EEEEEE;
+}
+

@@ -1,0 +1,38 @@
+.m-radial{
+    position: relative;
+    width: 32px;
+    height: 33px;
+}
+.m-radial-root{
+    display: block;
+    position: absolute;
+}
+.m-radial-list{
+    display: block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 32px;
+    height: 33px;
+    top: 0;
+    left: 0;
+}
+.m-radial li{
+    list-style: none;
+    position: absolute;
+    width: 32px;
+    height: 33px;
+    display: none;
+}
+.m-radial a{
+    display: block;
+    width: 32px;
+    height: 33px;
+}
+.m-radial a[icon="cross"]{
+    background: url("images/rotary-cross.png");
+}
+.m-radial a[icon="star"]{
+    background: url("images/rotary-star.png") 0 -198px;
+}

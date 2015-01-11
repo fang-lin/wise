@@ -1,0 +1,67 @@
+/**
+ * BUG IE7下 m-box-header 显示不正常
+ **/
+.m-box{
+
+}
+.m-box-header{
+    padding: 0 15px;
+    background-color: #DDDDDD;
+    *zoom: 1;
+}
+.m-box-header:after{
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.m-box-h1,
+.m-box-h2,
+.m-box-h3{
+    padding: 0;
+    display: inline;
+}
+.m-box-h2>li,
+.m-box-h3>li{
+    font-size: 12px;
+    line-height: 28px;
+    display: inline-block;
+    *float: left;
+    *zoom: 1;
+}
+.m-box-h2>li+li,
+.m-box-h3>li+li{
+    margin: 0 0 0 8px;
+}
+.m-box-h1{
+    font-size: 12px;
+    margin: 0 15px 0 0;
+    float: left;
+    line-height: 28px;
+}
+.m-box-h2{
+    margin: 0;
+    list-style: none;
+    float: left;
+    font-size: 0;
+}
+.m-box-h3{
+    margin: 0 0 0 15px;
+    float: right;
+    font-size: 0;
+}
+.m-box-body{
+    background-color: #FFFFFF;
+}
+.m-box-in-body{
+    padding: 15px;
+}
+.m-box-footer{
+    background-color: #DDDDDD;
+}
+.m-box-in-footer{
+    padding: 10px 15px;
+}

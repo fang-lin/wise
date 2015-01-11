@@ -91,7 +91,7 @@
             escape: /\{\{-([\s\S]+?)\}\}/g
         };
 
-        var refreshInterval = 1;
+        var refreshInterval = 20;
 
         setInterval(function () {
 

@@ -37,13 +37,15 @@
                 <label for="" class="col-sm-1 control-label">到期时间</label>
 
                 <div class="col-sm-9">
-                    <div class="input-group date form_datetime"
-                         data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                        <input class="form-control" size="16" type="datetime" value="2014-10-10 00:00" readonly>
-                    </div>
-                    <input type="hidden" id="dtp_input1" value=""/>
+                    <input type="datetime" readonly class="form-control" id="end-time-input" value="2014-10-01 00:00">
+
+                    <!--                    <div class="input-group date form_datetime"-->
+                    <!--                         data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">-->
+                    <!--                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>-->
+                    <!--                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>-->
+                    <!--                        <input class="form-control" size="16" type="datetime" value="2014-10-10 00:00" readonly>-->
+                    <!--                    </div>-->
+                    <!--                    <input type="hidden" id="dtp_input1" value=""/>-->
                 </div>
             </div>
             <div class="form-group">
@@ -307,10 +309,21 @@
 //
 //        $.fn.zTree.init($("#account-tree"), setting, nodes);
 
-        $(".form_datetime").datetimepicker({
-            showMeridian: true,
-            autoclose: true,
-            todayBtn: true
+        $('#end-time-input').mCalendar({
+            date: new Date(),
+            callback: function (date, wrap) {
+                $('#end-time-input').val($.mCalendarOpts.format.datetime(date));
+            },
+            clear: function (date, wrap) {
+                $('#end-time-input').val('');
+            },
+            clock: true
         });
+
+//        $(".form_datetime").datetimepicker({
+//            showMeridian: true,
+//            autoclose: true,
+//            todayBtn: true
+//        });
     });
 </script>

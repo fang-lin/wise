@@ -1,0 +1,26 @@
+.m-msg{
+    margin: 0;
+    padding: 10px;
+    border: solid 1px #999999;
+    width: 20%;
+    position: fixed;
+    top: -9999px;
+    background: #EEEEEE;
+    z-index: 100;
+}
+.m-msg-text{
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    zoom: 1;
+}
+.m-msg-right{
+    margin: 0;
+    padding: 5px;
+    float: right;
+    line-height: 0;
+    font-size: 0;
+}
+.m-msg-close{
+    cursor: pointer;
+}

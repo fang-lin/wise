@@ -1,0 +1,329 @@
+.m-form-inli>.m-form-in>.m-select,
+.m-form-hori>.m-form-in>.m-select,
+.m-form-uhori>.m-form-in>.m-select,
+.m-form-inli>.m-form-in>.m-addon,
+.m-form-hori>.m-form-in>.m-addon,
+.m-form-uhori>.m-form-in>.m-addon,
+.m-form-inli>.m-form-in>.m-volume,
+.m-form-hori>.m-form-in>.m-volume,
+.m-form-uhori>.m-form-in>.m-volume{
+    padding: 0 27px 0 0;
+}
+.m-form-doub>.m-form-in>.m-select,
+.m-form-hori-fix>.m-form-in>.m-select,
+.m-form-uhori-fix>.m-form-in>.m-select,
+.m-form-doub>.m-form-in>.m-addon,
+.m-form-hori-fix>.m-form-in>.m-addon,
+.m-form-uhori-fix>.m-form-in>.m-addon,
+.m-form-doub>.m-form-in>.m-volume,
+.m-form-hori-fix>.m-form-in>.m-volume,
+.m-form-uhori-fix>.m-form-in>.m-volume{
+    padding: 0 17px 0 0;
+}
+.m-select,
+.m-addon,
+.m-volume{
+    font-size: 0;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-select>input,
+.m-select>input[disabled],
+.m-addon>input,
+.m-addon>input[disabled],
+.m-volume>input,
+.m-volume>input[disabled]{
+    cursor: pointer;
+    margin: 0;
+    padding: 3px 4px;
+    outline: medium none;
+    border: solid 1px #999999;
+    line-height: 18px;
+    height: 18px;
+    vertical-align: top;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #333333;
+}
+.m-select>span{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 0 -1px;
+    padding: 3px;
+    outline: medium none;
+    border: solid 1px #999999;
+    line-height: 18px;
+    height: 18px;
+    width: 10px;
+    vertical-align: top;
+    background: #FFFFFF -5px -1px url("images/m-select.png") no-repeat;
+}
+.m-select[focus]>input,
+.m-addon[focus]>input{
+    border-color: #0066CC;
+    background: #FFFFFF;
+}
+.m-select[focus]>span,
+.m-addon[focus]>span{
+    border-color: #0066CC;
+    background-position: -31px -1px;
+}
+.m-select[disabled]>input,
+.m-select>input[disabled],
+.m-addon[disabled]>input,
+.m-addon>input[disabled],
+.m-volume[disabled]>input,
+.m-volume>input[disabled]{
+    border-color: #999999;
+    background-color: #DDDDDD;
+    color: #666666;
+}
+.m-select[disabled]>span{
+    border-color: #999999;
+    background-position: -57px -1px;
+    background-color: #DDDDDD;
+}
+.m-options{
+    display: none;
+    position: absolute;
+    background-color: #DDDDDD;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-options li{
+    padding: 0;
+    margin: 0;
+}
+.m-options a{
+    display: block;
+    padding: 3px 8px;
+    margin: 0;
+    line-height: 18px;
+}
+.m-options a:hover{
+    background: #0066CC;
+    color: #FFFFFF;
+}
+.m-addon>span{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 0 -1px;
+    padding: 3px;
+    outline: medium none;
+    border: solid 1px #999999;
+    line-height: 18px;
+    height: 18px;
+    width: 10px;
+    vertical-align: top;
+    background: #FFFFFF -5px -1px url("images/m-select.png") no-repeat;
+}
+.m-volume>span{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0 0 -1px;
+    padding: 0;
+    outline: medium none;
+    border: solid 1px #999999;
+    line-height: 0;
+    height: 24px;
+    width: 16px;
+    overflow: hidden;
+}
+.m-volume>span>a{
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 12px;
+    outline: medium none;
+    background: #FFFFFF -5px -1px url("images/m-select.png") no-repeat;
+}
+.m-volume>span>a[icon="up"]{
+    background-position: -5px -105px;
+}
+.m-volume>span>a[icon="down"]{
+    background-position: -5px -117px;
+}
+.m-volume>span>a[icon="up"]:hover{
+    background-position: -31px -105px;
+}
+.m-volume>span>a[icon="down"]:hover{
+    background-position: -31px -117px;
+}
+.m-volume>span>a[icon="plus"]{
+    background-position: -5px -157px;
+}
+.m-volume>span>a[icon="minus"]{
+    background-position: -5px -169px;
+}
+.m-volume>span>a[icon="plus"]:hover{
+    background-position: -31px -157px;
+}
+.m-volume>span>a[icon="minus"]:hover{
+    background-position: -31px -169px;
+}
+.m-volume>span>a:hover{
+    background-color: #0066CC;
+}
+.m-addon>span[icon="arrow"]{
+    background-position: -5px -27px;
+}
+.m-addon>span[icon="plus"]{
+    background-position: -5px -131px;
+}
+.m-addon>span[icon="apps"]{
+    background-position: -5px -53px;
+}
+.m-addon>span[icon="box"]{
+    background-position: -5px -79px;
+}
+.m-addon[focus]>span[icon="arrow"]{
+    background-position: -31px -27px;
+}
+.m-addon[focus]>span[icon="apps"]{
+    background-position: -31px -53px;
+}
+.m-addon[focus]>span[icon="box"]{
+    background-position: -31px -79px;
+}
+.m-addon[focus]>span[icon="plus"]{
+    background-position: -31px -131px;
+}
+.m-addon[disabled]>span{
+    border-color: #999999;
+    background-color: #BBBBBB;
+}
+.m-addon[disabled]>span[icon="arrow"]{
+    background-position: -57px -27px;
+}
+.m-addon[disabled]>span[icon="apps"]{
+    background-position: -57px -53px;
+}
+.m-addon[disabled]>span[icon="box"]{
+    background-position: -57px -79px;
+}
+.m-checkbox,
+.m-radio{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: url("images/m-checkbox.png");
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-checkbox[state="on"],
+.m-checkbox[type="check"][state="on"],
+.m-radio[type="check"][state="on"]{
+    background-position: 0 0;
+}
+.m-checkbox[state="off"],
+.m-checkbox[type="check"][state="off"],
+.m-radio[type="check"][state="off"]{
+    background-position: 0 -48px;
+}
+.m-checkbox[type="check"][state="on"][disabled],
+.m-radio[type="check"][state="on"][disabled]{
+    background-position: 0 -64px;
+}
+.m-checkbox[type="check"][state="off"][disabled],
+.m-radio[type="check"][state="off"][disabled]{
+    background-position: 0 -80px;
+}
+.m-checkbox[type="dot"][state="on"],
+.m-radio[state="on"],
+.m-radio[type="dot"][state="on"]{
+    background-position: -16px 0;
+}
+.m-checkbox[type="dot"][state="off"],
+.m-radio[state="off"],
+.m-radio[type="dot"][state="off"]{
+    background-position: -16px -48px;
+}
+.m-checkbox[type="dot"][state="on"][disabled],
+.m-radio[type="dot"][state="on"][disabled]{
+    background-position: -16px -64px;
+}
+.m-checkbox[type="dot"][state="off"][disabled],
+.m-radio[type="dot"][state="off"][disabled]{
+    background-position: -16px -80px;
+}
+.m-checkbox[type="cross"][state="on"],
+.m-radio[type="cross"][state="on"]{
+    background-position: -32px 0;
+}
+.m-checkbox[type="cross"][state="off"],
+.m-radio[type="cross"][state="off"]{
+    background-position: -32px -48px;
+}
+.m-checkbox[type="cross"][state="on"][disabled],
+.m-radio[type="cross"][state="on"][disabled]{
+    background-position: -32px -64px;
+}
+.m-checkbox[type="cross"][state="off"][disabled],
+.m-radio[type="cross"][state="off"][disabled]{
+    background-position: -32px -80px;
+}
+.m-checkbox[type="add"][state="on"],
+.m-radio[type="add"][state="on"]{
+    background-position: -48px 0;
+}
+.m-checkbox[type="add"][state="off"],
+.m-radio[type="add"][state="off"]{
+    background-position: -48px -48px;
+}
+.m-checkbox[type="add"][state="on"][disabled],
+.m-radio[type="add"][state="on"][disabled]{
+    background-position: -48px -64px;
+}
+.m-checkbox[type="add"][state="off"][disabled],
+.m-radio[type="add"][state="off"][disabled]{
+    background-position: -48px -80px;
+}
+.m-checkbox[type="minus"][state="on"],
+.m-radio[type="minus"][state="on"]{
+    background-position: -64px 0;
+}
+.m-checkbox[type="minus"][state="off"],
+.m-radio[type="minus"][state="off"]{
+    background-position: -64px -48px;
+}
+.m-checkbox[type="minus"][state="on"][disabled],
+.m-radio[type="minus"][state="on"][disabled]{
+    background-position: -64px -64px;
+}
+.m-checkbox[type="minus"][state="off"][disabled],
+.m-radio[type="minus"][state="off"][disabled]{
+    background-position: -64px -80px;
+}
+.m-checkbox-item,
+.m-radio-item{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 26px;
+    *display: inline;
+    *zoom: 1;
+}
+.m-form-in>.m-checkbox-item,
+.m-form-in>.m-radio-item{
+    margin: 0 15px 0 0;
+}
+.m-checkbox-item>.m-checkbox,
+.m-radio-item>.m-radio{
+    vertical-align: -4px;
+    *vertical-align: -2px;
+}
+

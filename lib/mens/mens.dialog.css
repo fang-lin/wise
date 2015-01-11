@@ -1,0 +1,98 @@
+/**
+ * BUG IE7下 m-box-header 显示不正常
+ **/
+.m-mask{
+    position: fixed;
+    background: rgba(0, 0, 0, .3);
+    top: -9999px;
+    left: -99999px;
+    right: -9999px;
+    bottom: -9999px;
+}
+.m-move{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-move{
+    cursor: move;
+}
+.m-no-scroll{
+    overflow: hidden;
+}
+.m-dialog{
+    position: absolute;
+    top: -9999px;
+    width: 320px;
+}
+.m-dialog-header{
+    padding: 0 15px;
+    background-color: #DDDDDD;
+    *zoom: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-dialog-header:after{
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.m-dialog-h1,
+.m-dialog-h2,
+.m-dialog-h3{
+    padding: 0;
+    display: inline;
+}
+.m-dialog-h2>li,
+.m-dialog-h3>li{
+    font-size: 12px;
+    line-height: 28px;
+    display: inline-block;
+    *float: left;
+    *zoom: 1;
+}
+.m-dialog-h2>li+li,
+.m-dialog-h3>li+li{
+    margin: 0 0 0 8px;
+}
+.m-dialog-h1{
+    font-size: 12px;
+    margin: 0 15px 0 0;
+    float: left;
+    line-height: 28px;
+}
+.m-dialog-h2{
+    margin: 0;
+    list-style: none;
+    float: left;
+    font-size: 0;
+}
+.m-dialog-h3{
+    margin: 0 0 0 15px;
+    float: right;
+    font-size: 0;
+}
+.m-dialog-h2 a,
+.m-dialog-h3 a{
+    cursor: pointer;
+}
+.m-dialog-body{
+    background: #FFFFFF;
+    overflow: auto;
+}
+.m-dialog-in-body{
+    padding: 15px;
+}
+.m-dialog-footer{
+    background: #DDDDDD;
+}
+.m-dialog-in-footer{
+    padding: 10px 15px;
+}

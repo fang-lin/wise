@@ -14,7 +14,15 @@
     <link href="lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/mens/mens.base.css"/>
+    <link rel="stylesheet" href="lib/mens/mens.grid.css"/>
+    <link rel="stylesheet" href="lib/mens/mens.table.css"/>
+    <link rel="stylesheet" href="lib/mens/mens.box.css"/>
+    <link rel="stylesheet" href="lib/mens/mens.form.css"/>
+    <link rel="stylesheet" href="lib/mens/mens.control.css"/>
+    <link rel="stylesheet" href="lib/mens/mens.calendar.css"/>
+    <link rel="stylesheet" href="lib/mens/default.css"/>
+    <!--<link href="lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet">-->
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -28,9 +36,16 @@
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/ztree/js/jquery.ztree.all-3.5.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-    <script src="lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <!--<script src="lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>-->
+    <!--<script src="lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>-->
     <script src="lib/highcharts/highcharts.js"></script>
+
+    <script src="lib/mens/mens.base.js"></script>
+    <script src="lib/mens/mens.table.js"></script>
+    <script src="lib/mens/mens.form.js"></script>
+    <script src="lib/mens/mens.control.js"></script>
+    <script src="lib/mens/mens.calendar.js"></script>
+    <script src="lib/mens/mens.do.js"></script>
 </head>
 
 <body>

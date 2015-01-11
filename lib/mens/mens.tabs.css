@@ -1,0 +1,95 @@
+.m-tabs .m-tabs-header,
+.m-step .m-step-header{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    *zoom: 1;
+    line-height: 0;
+}
+.m-tabs .m-tabs-header:after,
+.m-step .m-step-header:after{
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+ }
+.m-tabs .m-tabs-header li,
+.m-step-header li{
+    list-style: none;
+    float: left;
+    background: #EEEEEE;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-tabs-header li>a,
+.m-step-header li>a{
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
+    text-align: center;
+    line-height: 14px;
+}
+.m-tabs-body .m-tabs-section,
+.m-step-body .m-tabs-section{
+    display: none;
+    background: #DDDDDD;
+}
+.m-step-body .m-tabs-section:first-child{
+    display: block;
+}
+.m-tabs-in-body,
+.m-step-in-body{
+    padding: 15px;
+    margin: 0;
+}
+.m-utabs .m-tabs-header{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    font-size: 0;
+}
+.m-utabs{
+    background-color: #EEEEEE;
+}
+.m-utabs:after{
+    content: ' ';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+.m-utabs .m-tabs-header li{
+    list-style: none;
+    background-color: #EEEEEE;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.m-tabs-header li[focus],
+.m-step-header li[focus]{
+    background-color: #DDDDDD;
+}
+.m-step-header li[passed]{
+    background-color: #DDDDDD;
+}
+.m-utabs .m-tabs-body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    zoom: 1;
+}
